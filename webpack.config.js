@@ -9,7 +9,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.jsx?$/,        // For JavaScript and JSX files
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -19,7 +19,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.css$/,
+                test: /\.css$/,         // For CSS files
                 use: ['style-loader', 'css-loader'],
             },
         ],
@@ -28,4 +28,12 @@ module.exports = {
         extensions: ['.js', '.jsx'],
     },
     mode: 'development',
+    devServer: {
+        static: {
+            directory: path.join(__dirname),
+        },
+        compress: true,
+        port: 3000,  // You can use any port you prefer
+        hot: true,   // Enables hot reloading
+    },
 };
