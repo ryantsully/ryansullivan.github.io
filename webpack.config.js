@@ -9,7 +9,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.jsx?$/,        // For JavaScript and JSX
+                test: /\.jsx?$/,
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -19,7 +19,7 @@ module.exports = {
                 },
             },
             {
-                test: /\.css$/,         // For CSS files
+                test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
         ],
