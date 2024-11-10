@@ -1,15 +1,15 @@
 const path = require('path');
 
 module.exports = {
-    entry: './frontend/src/index.js',  // Adjust this path to point to your entry file
+    entry: './frontend/src/index.js',
     output: {
-        path: path.resolve(__dirname),  // Output path (root directory here)
-        filename: 'bundle.js',          // Output file name
+        path: path.resolve(__dirname),
+        filename: 'bundle.js',
     },
     module: {
         rules: [
             {
-                test: /\.jsx?$/,
+                test: /\.jsx?$/,        // For JavaScript and JSX
                 exclude: /node_modules/,
                 use: {
                     loader: 'babel-loader',
@@ -18,10 +18,14 @@ module.exports = {
                     },
                 },
             },
+            {
+                test: /\.css$/,         // For CSS files
+                use: ['style-loader', 'css-loader'],
+            },
         ],
     },
     resolve: {
         extensions: ['.js', '.jsx'],
     },
-    mode: 'development',  // Or 'production' for a minified build
+    mode: 'development',
 };
