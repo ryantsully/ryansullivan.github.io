@@ -6,7 +6,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: lightgray;
+    background-color: #d3d3d3;
 }
 
 #root {
