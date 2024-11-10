@@ -1,19 +1,48 @@
+/* General body styling */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    flex-direction: column;
+    min-height: 100vh;
     background-color: #d3d3d3;
 }
 
 #root {
-    width: 80%;
-    max-width: 600px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
 }
 
-h1 {
+/* Header Styling (fixed at the top) */
+.my-header {
+    background-color: #333;
+    color: white;
     text-align: center;
+    height: 10vh;
+    line-height: 10vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+/* Body section */
+.my-body {
+    background-color: rgba(0, 0, 0, 0.517);
+    color: white;
+    border-radius: 12px;
+    border-style: solid;
+    border-color: black;
+    width: 90%;
+    margin: 12vh auto 1vh;
+    padding: 20px;
+    text-align: center;
+    flex-grow: 1;
+    box-sizing: border-box;
+    height: calc(100vh - 12vh - 1vh);
+    /* Set height to fill remaining space, excluding header and bottom margin */
 }

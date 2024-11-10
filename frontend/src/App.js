@@ -1,11 +1,20 @@
 import React from 'react';
 
 function App() {
+
+    const handleButtonClick = () => {
+        console.log('Button clicked');
+    };
+
+
     return (
         <div>
-            <h1>Welcome to My Web App</h1>
-            <p>This is a basic setup with Flask and React.</p>
-        </div>
+            <div className="my-header">Header</div>
+            <p className="my-body">Test body
+                <br />
+                <button onClick={handleButtonClick}>My button</button>
+            </p>
+        </div >
     );
 }
 
